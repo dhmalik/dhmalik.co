@@ -1,51 +1,120 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set a white background and use a clean, modern font */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
+/* Header styling */
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px 0;
     text-align: center;
+    margin-bottom: 20px;
 }
 
+header img {
+    max-width: 120px;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #0056b3;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Navigation styling */
 nav ul {
+    display: flex;
+    justify-content: center;
     list-style-type: none;
-    padding: 0;
-    margin: 0;
-    background-color: #444;
-    overflow: hidden;
+    margin-bottom: 20px;
 }
 
 nav ul li {
-    float: left;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
     text-decoration: none;
+    color: #0056b3;
+    font-weight: bold;
 }
 
 nav ul li a:hover {
-    background-color: #555;
+    color: #003d7a;
 }
 
+/* Main content styling */
 main {
     padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
 }
 
+main h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+main p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+main ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+main ul li {
+    margin-bottom: 10px;
+}
+
+/* Footer styling */
 footer {
-    background-color: #333;
-    color: white;
     text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    main {
+        padding: 15px;
+    }
 }
