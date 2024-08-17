@@ -7,102 +7,138 @@
 
 /* Set a white background and use a clean, modern font */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     background-color: #ffffff;
     color: #333;
     line-height: 1.6;
+    margin: 0;
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
-/* Header styling */
+/* Header styling with logo and menu bar */
 header {
-    text-align: center;
+    border-bottom: 1px solid #eaeaea;
+    padding: 20px 0;
     margin-bottom: 20px;
 }
 
-header img {
-    max-width: 120px;
-    margin-bottom: 10px;
+.logo-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header h1 {
-    font-size: 2.5em;
-    color: #0056b3;
+.logo {
+    max-width: 150px;
 }
 
-header p {
-    font-size: 1.2em;
-    color: #555;
-}
-
-/* Navigation styling */
 nav ul {
     display: flex;
-    justify-content: center;
     list-style-type: none;
-    margin-bottom: 20px;
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin-left: 30px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #0056b3;
-    font-weight: bold;
+    color: #007bff;
+    font-weight: 500;
+    font-size: 1em;
 }
 
 nav ul li a:hover {
-    color: #003d7a;
+    color: #0056b3;
 }
 
-/* Main content styling */
-main {
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
 }
 
-main h2 {
-    font-size: 2em;
+.hero h1 {
+    font-size: 2.5em;
     color: #333;
     margin-bottom: 10px;
 }
 
-main p {
-    font-size: 1em;
+.hero p {
+    font-size: 1.2em;
+    color: #555;
     margin-bottom: 20px;
 }
 
-main ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    margin-bottom: 20px;
+.cta-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
 }
 
-main ul li {
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Main content styling */
+main {
+    padding: 20px 0;
+}
+
+.services, .about, .contact, .careers {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.services h2, .about h1, .contact h1, .careers h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.service-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.service-item {
+    flex-basis: 48%;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.service-item h3 {
+    font-size: 1.5em;
     margin-bottom: 10px;
+    color: #007bff;
+}
+
+.service-item p {
+    font-size: 1em;
+    color: #666;
 }
 
 /* Footer styling */
 footer {
     text-align: center;
-    margin-top: 20px;
+    padding: 20px 0;
+    border-top: 1px solid #eaeaea;
+    margin-top: 40px;
     font-size: 0.9em;
     color: #777;
 }
 
 /* Responsive design for mobile */
 @media (max-width: 768px) {
-    body {
-        padding: 10px;
-    }
-
-    header h1 {
-        font-size: 2em;
+    .logo-menu {
+        flex-direction: column;
+        align-items: center;
     }
 
     nav ul {
@@ -111,10 +147,11 @@ footer {
     }
 
     nav ul li {
+        margin-left: 0;
         margin-bottom: 10px;
     }
 
-    main {
-        padding: 15px;
+    .service-item {
+        flex-basis: 100%;
     }
 }
