@@ -36,13 +36,15 @@ nav ul {
     display: flex;
     list-style-type: none;
     padding: 0;
-    flex-wrap: wrap;
     justify-content: center; /* Center the menu */
     flex: 1; /* Allow menu to take up available space */
+    flex-wrap: nowrap; /* Prevent items from wrapping onto the next line */
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 15px;
+    white-space: nowrap; /* Prevent text wrapping in individual items */
 }
 
 nav ul li a {
@@ -153,5 +155,9 @@ footer {
 
     nav ul li {
         margin-left: 10px; /* Reduce space between items on mobile */
+    }
+    
+    .service-item {
+        flex-basis: 100%;
     }
 }
